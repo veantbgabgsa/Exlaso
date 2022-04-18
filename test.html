@@ -1,0 +1,338 @@
+<html>
+
+<head>
+    <title> Exlaso's shop</title>
+    <style>
+        @font-face {
+            font-family: VALORANT;
+            src: url(vlcfont.ttf);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'VALORANT', sans-serif;
+            /* color: white;  */
+            z-index: 10;
+        }
+        
+        .left {
+            /* border: 2px solid blue; */
+            display: inline-block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            font-size: 25px;
+        }
+        
+        .left img {
+            width: 160px;
+            height: 125px;
+            transition: all 1s ease-in-out;
+        }
+        
+        .left img:hover {
+            width: 275px;
+            height: 225px;
+            /* -o-animation-fill-mode: forwards; */
+        }
+        /* .left img:not(:hover) {
+            animation: imganm1 1s;
+            animation-fill-mode: forwards;
+             animation-delay: 1s; 
+             border: 2px solid purple; 
+        }
+         */
+        
+        .bottom {
+            /* border: 2px solid yellow; */
+            display: inline-block;
+            position: absolute;
+            bottom: 5px;
+            font-size: 25px;
+            color: white;
+            width: 99.7%;
+            /* background-color: black; */
+            /* padding: 0px 0px; */
+        }
+        
+        .opagents {
+            display: inline-block;
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            font-size: 25px;
+            color: white;
+            /* border: 2px solid red; */
+        }
+        /*         
+        .arrow:hover {
+            transform: scale(1.5);
+        }
+        
+        .arrow {
+            display: inline-block;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 30px;
+            color: white;
+            transition: 1s;
+        }
+         */
+        
+        .agents li:hover {
+            border-bottom: 2px solid red;
+            border-top: 2px solid red;
+            background-color: black;
+            opacity: 100%;
+        }
+        
+        @keyframes opaq {
+            0% {
+                opacity: 0%;
+            }
+            100% {
+                opacity: 100%;
+            }
+        }
+        
+        .mid {
+            /* border: 2px solid red; */
+            display: block;
+            width: 40%;
+            margin: 20px auto;
+            left: 510px;
+            position: absolute;
+        }
+        
+        .nav {
+            display: inline-block;
+            /* border: 2px solid red; */
+        }
+        
+        .nav li {
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .nav li a:hover {
+            color: grey;
+            border-bottom: 2px solid gray;
+            /* transform: scale(1.05); */
+        }
+        
+        .nav li a {
+            color: white;
+            text-decoration: none;
+            padding: 14px;
+            font-size: 25px;
+            /* border: 2px solid red; */
+            /* transition: .5s; */
+        }
+        
+        p,
+        .contact {
+            display: none;
+            font-family: cursive;
+        }
+        
+        .nav li:hover p {
+            animation: card .5s;
+            animation-fill-mode: forwards;
+            display: inline-block;
+            position: absolute;
+            top: 75px;
+            left: 145px;
+            width: 310px;
+            background-color: black;
+            border-radius: 13px;
+            color: gray;
+            padding: 15px;
+            border: 1px solid white;
+            font-weight: 1000;
+            box-sizing: border-box;
+        }
+        
+        .nav li:hover .contact {
+            /* animation: card .5s;
+            animation-fill-mode: forwards; */
+            display: inline-block;
+            position: absolute;
+            top: 75px;
+            left: 320px;
+            width: 310px;
+            background-color: black;
+            border-radius: 13px;
+            color: gray;
+            padding: 15px;
+            border: 1px solid white;
+            font-weight: 1000;
+            box-sizing: border-box;
+        }
+        /*         
+        .background {
+            background: url('oknb.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        } */
+        
+        .bgvideo {
+            /* background-size: cover; */
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+            z-index: -10;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            object-fit: cover;
+            pointer-events: none;
+        }
+        
+        .img {
+            display: inline-block;
+            position: absolute;
+        }
+        
+        @keyframes imganm {
+            from {
+                width: 160px;
+                height: 125px;
+            }
+            to {
+                width: 275px;
+                height: 225px;
+            }
+        }
+        
+        @keyframes card {
+            0% {
+                opacity: 0%;
+            }
+            100% {
+                opacity: 90%;
+            }
+        }
+        
+        .sm li {
+            font-size: 20px;
+            display: inline-block;
+            margin: 0px 133px;
+            /* text-decoration: none; */
+            /* opacity: 100%; */
+        }
+        
+        .sm li a:hover {
+            /* background-color: ; */
+            color: gray;
+            text-shadow: 1px 1px black;
+            /* font-weight: 600; */
+            /* border: 2px solid red; */
+        }
+        
+        .sm li a {
+            text-decoration: none;
+            color: white;
+            text-shadow: 1px 1px black;
+        }
+        
+        .igimg {
+            /* display: inline-block; */
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            top: -59px;
+            left: 161px;
+            /* border: 2px solid black; */
+        }
+        
+        .fbimg {
+            /* display: inline-block; */
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            top: -45px;
+            left: 567px;
+            /* border: 2px solid black; */
+        }
+        
+        .ytimg {
+            /* display: inline-block; */
+            position: absolute;
+            height: 69px;
+            width: 85px;
+            top: -55px;
+            left: 919px;
+            /* border: 2px solid black; */
+        }
+        
+        .dcimg {
+            /* display: inline-block; */
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            top: -40px;
+            left: 1310px;
+            /* border: 2px solid black; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left">
+
+        <img src="logo.png" alt="error">
+
+
+
+    </div>
+
+
+    <!-- <img class="png" src="breach.png" alt="#"> -->
+    <!-- <img class="png1" src="cypher.png" alt=""> -->
+
+    <div class="mid">
+
+
+        <ul class="nav">
+            <li><a href="file:///C:/Users/Vedan/Pictures/Screenshots/html%20test/test.html"> Home</a></li>
+            <li><a href="file:///C:/Users/Vedan/Pictures/Screenshots/skins.html"> Skins  </a></li>
+            <li><a href="#">  About us </a>
+                <p> this is about us. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, repellat quaerat voluptatem enim adipisci repudiandae molestiae, molestias odio, autem commodi eos nulla. Quis, explicabo nemo. At praesentium, assumenda
+                    eligendi exercitationem accusantium in ab optio, omnis quis accusamus doloremque mollitia pariatur quam officiis officia voluptates suscipit! Molestiae aut labore accusamus tempore nam delectus officiis commodi! Id.
+                </p>
+            </li>
+            <li><a href="#">  Contact us </a>
+                <p class="contact"> Contact No. : +919106414017 <br> Email Address : Exlaso53@gmail.com</p>
+            </li>
+        </ul>
+
+
+    </div>
+
+
+
+    <div class="bottom">
+        <ul class="sm">
+            <li class="ig">
+                <a href="https://www.instagram.com/exlasooo/" target="_blank"> <img class="igimg" src="ig.png" alt="error"> Instagram </a>
+            </li>
+            <li class="fb">
+                <a href="https://www.facebook.com/gaming/Exlasooo" target="_blank"> <img src="fb.png" alt="" class="fbimg"> Facebook </a>
+            </li>
+            <li class="yt">
+                <a href="https://www.youtube.com/c/exlaso" target="_blank"> <img src="yt.png" alt="" class="ytimg">Youtube </a>
+            </li>
+            <li class="dc">
+                <a href="https://discord.gg/tMxrj3ZWgz" target="_blank"> <img src="dc.png" alt="" class="dcimg" target="_blank"> Discord </a>
+            </li>
+        </ul>
+    </div>
+    <div class="background"></div>
+    <video class="bgvideo" autoplay loop muted>         <source src="HomeScreen.mp4"       </video>
+
+</body>
+
+</html>
